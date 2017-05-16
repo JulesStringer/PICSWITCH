@@ -1,5 +1,5 @@
 // ID Written at physical location of switch
-#define SWITCH_ID 222
+#define SWITCH_ID 220
 // Z for test with UART
 // Y for test with SPI
 
@@ -74,9 +74,9 @@
 #if SWITCH_ID == 165
 #define LED_OFFSET 8
 #define VERSION 17
-#define PROCESS_BATTERY 0
-#define CHARGER_PIN 6
-#define CHARGER_PROGRAM 20
+//#define PROCESS_BATTERY 0
+//#define CHARGER_PIN 6
+//#define CHARGER_PROGRAM 20
 #define INPUT_UART2 0
 #elif (SWITCH_ID == 178 )
 #define VERSION 16
@@ -131,9 +131,9 @@
 #endif
 #if SWITCH_ID == 161
 #define LED_OFFSET 8
-#define PROCESS_BATTERY 0
-#define CHARGER_PIN 7
-#define CHARGER_PROGRAM 21
+//#define PROCESS_BATTERY 0
+//#define CHARGER_PIN 7
+//#define CHARGER_PROGRAM 21
 #endif
 #if SWITCH_ID == 162
 #define FORWARD_UART2
@@ -187,9 +187,9 @@
 #endif
 #if SWITCH_ID == 177  // Q
 #define FORWARD_UART2
-#define PROCESS_BATTERY 0
-#define CHARGER_PIN 8
-#define CHARGER_PROGRAM 22
+//#define PROCESS_BATTERY 0
+//#define CHARGER_PIN 8
+//#define CHARGER_PROGRAM 22
 #endif
                        // R 178 under stairs defined above
 #if SWITCH_ID == 184   // X driveway lights controller

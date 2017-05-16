@@ -9,8 +9,8 @@ Generates lighting commands and sends these to controller.
 
 #include "HardwareProfile.h"
 
-#include "C:\DEV\Smallboards\include\voltages.h"
-#include "C:\DEV\Smallboards\include\reasons.h"
+#include "C:\DEV\HomeAutomation\include\voltages.h"
+//#include "C:\DEV\HomeAutomation\include\reasons.h"
 
 // Should be incremented when each change is rolled out.
 #define SOFTWARE_VERSION 1
@@ -57,6 +57,7 @@ BYTE PopBuffer(volatile BYTE* pszBuffer, volatile BYTE* pnHead, volatile BYTE* p
     }
     return ch;
 }
+#if 0
 void PushBuffer(volatile BYTE* pszBuffer, volatile BYTE* pnTail, BYTE ch)
 {
     if ( ch != 0 )
@@ -69,6 +70,7 @@ void PushBuffer(volatile BYTE* pszBuffer, volatile BYTE* pnTail, BYTE ch)
         }
     }
 }
+#endif
 BYTE TestBuffer(BYTE nHead, BYTE nTail)
 {
     return nHead != nTail;
@@ -2709,7 +2711,7 @@ void InitializeBoard(void)
 #endif
     #endif
     OSCCON2 = 0;
-    // set clock to 4MHz (should be here by default anyway)
+    // set clock to chosen speed (should be 4mhz here by default anyway)
     OSCCONbits.IDLEN = 0;  // sleep on sleep instruction
     OSCCONbits.IRCF = IRCF_VALUE;   // 4 Mhz
     OSCCONbits.OSTS = 0;

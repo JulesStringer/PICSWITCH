@@ -137,146 +137,127 @@
 
 #define LED_COUNT 16
 
-// LED1 is pin 3
-#define LED1_USE_PWM 0
-#define LED1_ANSEL                    (PRODL)
-#define LED1_PWM_TRIS                 (TRISAbits.TRISA1)
+// LED1 is pin 2
+#define LED1_USE_PWM 3
+#define LED1_ANSEL                    (ANSELAbits.ANSA0)
+#define LED1_PWM_TRIS                 (TRISAbits.TRISA0)
 #define LED1_TRIS LED1_PWM_TRIS
-#define LED1_LAT                      (LATAbits.LATA1)
-#define LED1_PORT                     (PORTAbits.RA1)
+#define LED1_LAT                      (LATAbits.LATA0)
+#define LED1_PORT                     (PORTAbits.RA0)
 #define LED1_TSEL                     (PRODL)
-// LED2 is pin 5
-#define LED2_USE_PWM 0
-#define LED2_ANSEL                    (PRODL)
-#define LED2_PWM_TRIS                 (TRISAbits.TRISA3)
+// LED2 is pin 4
+#define LED2_USE_PWM 3
+#define LED2_ANSEL                    (ANSELAbits.ANSA2)
+#define LED2_PWM_TRIS                 (TRISAbits.TRISA2)
 #define LED2_TRIS LED2_PWM_TRIS
-#define LED2_LAT                      (LATAbits.LATA3)
-#define LED2_PORT                     (PORTAbits.RA3)
+#define LED2_LAT                      (LATAbits.LATA2)
+#define LED2_PORT                     (PORTAbits.RA2)
 #define LED2_TSEL                     (PRODL)
 
-// LED3 is pin 9
-#define LED3_USE_PWM 0
-#define LED3_ANSEL                    (PRODL)
-#define LED3_PWM_TRIS                 (TRISAbits.TRISA7)
+// LED3 is pin 7
+#define LED3_USE_PWM 3
+#define LED3_ANSEL                    (ANSELAbits.ANSA5)
+#define LED3_PWM_TRIS                 (TRISAbits.TRISA5)
 #define LED3_TRIS LED3_PWM_TRIS
-#define LED3_LAT                      (LATAbits.LATA7)
-#define LED3_PORT                     (PORTAbits.RA7)
+#define LED3_LAT                      (LATAbits.LATA5)
+#define LED3_PORT                     (PORTAbits.RA5)
 #define LED3_TSEL                     (PRODL)
 
-// LED4 is connected to PIN 26
-#define LED4_ANSEL                    (ANSELBbits.ANSB5)
-#define LED4_TRIS                     (TRISBbits.TRISB5)
-#define LED4_LAT                      (LATBbits.LATB5)
-#define LED4_PORT                     (PORTBbits.RB5)
-	// CCP3 is on pin 26
-#define LED4_TSEL                     (CCPTMRS0bits.C3TSEL)
-#define LED4_PWM_TRIS                 (LED4_TRIS)
-#define LED4_CCPM                     (CCP3CONbits.CCP3M)
-#define LED4_DCB                      (CCP3CONbits.DC3B)
-#define LED4_CPPRL                    (CCPR3L)
-#define LED4_PWMMODE                  (PRODL)
-#define LED4_REVERSE_LEVEL 1
-#define LED4_USE_PWM LED_USE_PWM
+// LED4 is connected to PIN 14
+#define LED4_USE_PWM 3
+#define LED4_ANSEL                    (ANSELCbits.ANSC3)
+#define LED4_PWM_TRIS                 (TRISCbits.TRISC3)
+#define LED4_TRIS LED4_PWM_TRIS
+#define LED4_LAT                      (LATCbits.LATC3)
+#define LED4_PORT                     (PORTCbits.RC3)
+#define LED4_TSEL                     (PRODL)
 
-// LED5 is connected to PIN 6
-#define LED5_ANSEL                    (PRODL)
-#define LED5_TRIS                     (TRISAbits.TRISA4)
-#define LED5_LAT                      (LATAbits.LATA4)
-#define LED5_PORT                     (PORTAbits.RA4)
-#define LED5_TSEL                     (CCPTMRS1bits.C5TSEL)
-#define LED5_PWM_TRIS                 (LED5_TRIS)
-#define LED5_CCPM                     (CCP5CONbits.CCP5M)
-#define LED5_DCB                      (CCP5CONbits.DC5B)
-#define LED5_CPPRL                    (CCPR5L)
-#define LED5_PWMMODE                  (PRODL)
-#define LED5_REVERSE_LEVEL 1
-#define LED5_USE_PWM LED_USE_PWM
+// LED5 is connected to PIN 25
+#define LED5_USE_PWM 3
+#define LED5_ANSEL                    (ANSELBbits.ANSB4)
+#define LED5_PWM_TRIS                 (TRISBbits.TRISB4)
+#define LED5_TRIS LED5_PWM_TRIS
+#define LED5_LAT                      (LATBbits.LATB4)
+#define LED5_PORT                     (PORTBbits.RB4)
+#define LED5_TSEL                     (PRODL)
 
-// LED6 is connected to PIN 13
-#define LED6_ANSEL                    (ANSELCbits.ANSC2)
-#define LED6_TRIS                     (TRISCbits.TRISC2)
-#define LED6_LAT                      (LATCbits.LATC2)
-#define LED6_PORT                     (PORTCbits.RC2)
+// LED6 is connected to PIN 24
+#define LED6_USE_PWM 3
+#define LED6_ANSEL                    (ANSELBbits.ANSB3)
+#define LED6_PWM_TRIS                 (TRISBbits.TRISB3)
+#define LED6_TRIS LED6_PWM_TRIS
+#define LED6_LAT                      (LATBbits.LATB3)
+#define LED6_PORT                     (PORTBbits.RB3)
+#define LED6_TSEL                     (PRODL)
 	// CCP1
 //#pragma config CCP2MX=0
 // the above is default
-#define LED6_TSEL                     (CCPTMRS0bits.C1TSEL)
-#define LED6_PWM_TRIS                 (LED6_TRIS)
-#define LED6_CCPM                     (CCP1CONbits.CCP1M)
-#define LED6_DCB                      (CCP1CONbits.DC1B)
-#define LED6_CPPRL                    (CCPR1L)
-#define LED6_PWMMODE                  (CCP1CONbits.P1M)
-#define LED6_REVERSE_LEVEL 1
-#define LED6_USE_PWM LED_USE_PWM
 
-// LED7 is connected to pin 12
-#define LED7_ANSEL                    (PRODL)
-#define LED7_TRIS                     (TRISCbits.TRISC1)
-#define LED7_LAT                      (LATCbits.LATC1)
-#define LED7_PORT                     (PORTCbits.RC1)
-	// CCP2
-#define LED7_TSEL                     (CCPTMRS0bits.C2TSEL)
-#define LED7_PWM_TRIS                 (LED7_TRIS)
-#define LED7_CCPM                     (CCP2CONbits.CCP2M)
-#define LED7_DCB                      (CCP2CONbits.DC2B)
-#define LED7_CPPRL                    (CCPR2L)
-#define LED7_PWMMODE                  (CCP2CONbits.P2M)
-#define LED7_REVERSE_LEVEL 1
-#define LED7_USE_PWM LED_USE_PWM
+// LED7 is connected to pin 23
+#define LED7_USE_PWM 3
+#define LED7_ANSEL                    (ANSELBbits.ANSB2)
+#define LED7_PWM_TRIS                 (TRISBbits.TRISB2)
+#define LED7_TRIS LED7_PWM_TRIS
+#define LED7_LAT                      (LATBbits.LATB2)
+#define LED7_PORT                     (PORTBbits.RB2)
+#define LED7_TSEL                     (PRODL)
 
-// LED2 is connected to PIN 21
-#define LED8_ANSEL                    (ANSELBbits.ANSB0)
-#define LED8_TRIS                     (TRISBbits.TRISB0)
-#define LED8_LAT                      (LATBbits.LATB0)
-#define LED8_PORT                     (PORTBbits.RB0)
-#define LED8_TSEL                     (CCPTMRS1bits.C4TSEL)
-#define LED8_PWM_TRIS                 (LED8_TRIS)
-#define LED8_CCPM                     (CCP4CONbits.CCP4M)
-#define LED8_DCB                      (CCP4CONbits.DC4B)
-#define LED8_CPPRL                    (CCPR4L)
-#define LED8_PWMMODE                  (PRODL)
-#define LED8_REVERSE_LEVEL 1
-#define LED8_USE_PWM LED_USE_PWM
+// LED8 is connected to PIN 22
+#define LED8_USE_PWM 3
+#define LED8_ANSEL                    (ANSELBbits.ANSB1)
+#define LED8_PWM_TRIS                 (TRISBbits.TRISB1)
+#define LED8_TRIS LED8_PWM_TRIS
+#define LED8_LAT                      (LATBbits.LATB1)
+#define LED8_PORT                     (PORTBbits.RB1)
+#define LED8_TSEL                     (PRODL)
 
 // Additional LED outputs
-// ADC1 pin 2
-#define LED9_ANSEL                    (ANSELAbits.ANSA0)
-#define LED9_TRIS                     (TRISAbits.TRISA0)
-#define LED9_LAT                      (LATAbits.LATA0)
+// LED9 pin pin 21
+#define LED9_USE_PWM 3
+#define LED9_ANSEL                    (ANSELBbits.ANSB0)
+#define LED9_TRIS                     (TRISBbits.TRISB0)
+#define LED9_LAT                      (LATBbits.LATB0)
 
-// ADC2 pin 3
-#define LED10_ANSEL                    (ANSELAbits.ANSA2)
-#define LED10_LAT                      (LATAbits.LATA2)
-#define LED10_TRIS                     (TRISAbits.TRISA2)
+// LED10 pin 12
+#define LED10_USE_PWM 3
+#define LED10_ANSEL                    (PRODL)
+#define LED10_LAT                      (LATCbits.LATC1)
+#define LED10_TRIS                     (TRISCbits.TRISC1)
 
-// ADC3 pin 4
-#define LED11_ANSEL                    (ANSELAbits.ANSA5)
-#define LED11_LAT                      (LATAbits.LATA5)
-#define LED11_TRIS                     (TRISAbits.TRISA5)
+// LED11 pin 13
+#define LED11_USE_PWM 3
+#define LED11_ANSEL                    (ANSELCbits.ANSC2)
+#define LED11_LAT                      (LATCbits.LATC2)
+#define LED11_TRIS                     (TRISCbits.TRISC2)
 
-// ADC4 pin 14
-#define LED12_ANSEL                   (ANSELCbits.ANSC3)
-#define LED12_LAT                     (LATCbits.LATC3)
-#define LED12_TRIS                    (TRISCbits.TRISC3)
-// ADC5 pin 25
-#define LED13_ANSEL                   (ANSELBbits.ANSB4)
-#define LED13_LAT                     (LATBbits.LATB4)
-#define LED13_TRIS                    (TRISBbits.TRISB4)
+// LED12 pin 6
+#define LED12_USE_PWM 3
+#define LED12_ANSEL                   (PRODL)
+#define LED12_LAT                     (LATAbits.LATA4)
+#define LED12_TRIS                    (TRISAbits.TRISA4)
+// LED13 pin 26
+#define LED13_USE_PWM 3
+#define LED13_ANSEL                   (ANSELBbits.ANSB5)
+#define LED13_LAT                     (LATBbits.LATB5)
+#define LED13_TRIS                    (TRISBbits.TRISB5)
 
-// ADC6 pin 24
-#define LED14_ANSEL                   (ANSELBbits.ANSB3)
-#define LED14_LAT                     (LATBbits.LATB3)
-#define LED14_TRIS                    (TRISBbits.TRISB3)
+// LED14 pin 9
+#define LED14_USE_PWM 3
+#define LED14_ANSEL                   (PRODL)
+#define LED14_LAT                     (LATAbits.LATA7)
+#define LED14_TRIS                    (TRISAbits.TRISA7)
 
-// ADC7 pin 23
-#define LED15_ANSEL                   (ANSELBbits.ANSB2)
-#define LED15_LAT                     (LATBbits.LATB2)
-#define LED15_TRIS                    (TRISBbits.TRISB2)
+// LED15 pin 5
+#define LED15_USE_PWM 3
+#define LED15_ANSEL                   (ANSELAbits.ANSA3)
+#define LED15_LAT                     (LATAbits.LATA3)
+#define LED15_TRIS                    (TRISAbits.TRISA3)
 
-// ADC8 pin 22
-#define LED16_ANSEL                   (ANSELBbits.ANSB1)
-#define LED16_LAT                     (LATBbits.LATB1)
-#define LED16_TRIS                    (TRISBbits.TRISB1)
+// LED16 pin 3
+#define LED16_USE_PWM 3
+#define LED16_ANSEL                   (ANSELAbits.ANSA1)
+#define LED16_LAT                     (LATAbits.LATA1)
+#define LED16_TRIS                    (TRISAbits.TRISA1)
 
 #define MIN_MANUAL_PWM 0
 #define MAX_MANUAL_PWM 0
